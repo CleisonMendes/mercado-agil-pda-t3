@@ -1,0 +1,26 @@
+AVISO: DADOS FICTÍCIOS PARA TESTES
+
+Os CPFs e CNPJs contidos neste arquivo destinam-se exclusivamente
+a testes e fins educacionais no projeto Mercado Ágil — PDA.
+
+Os dados foram gerados artificialmente e não devem ser utilizados
+para cadastros reais, transações comerciais ou qualquer finalidade
+que não seja o desenvolvimento e a validação do sistema.
+
+Este arquivo não deve conter dados pessoais reais ou sensíveis.
+
+
+
+CNPJ 1: 24.990.175/0001-51
+CNPJ 2: 11.860.248/0001-49
+CNPJ 3: 26.724.139/0001-71
+
+
+NOME: Joana Silva
+CPF: 073.348.050-03
+
+NOME: Vitor Pereira
+CPF: 081.810.240-36
+
+NOME: Ana Mendes
+CPF: 852.114.760-00
