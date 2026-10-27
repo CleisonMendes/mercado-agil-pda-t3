@@ -1,0 +1,346 @@
+/* ===== Variáveis ===== */
+:root {
+  --bg: #f5f6fa;
+  --card: #fff;
+  --tx: #1d2433;
+  --mut: #6b7280;
+  --pri: #2563eb;
+  --bd: #e3e6ee;
+  --ok: #16a34a;
+  --er: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1420;
+    --card: #1a2132;
+    --tx: #e8ecf5;
+    --mut: #9aa4b8;
+    --bd: #2b3550;
+  }
+}
+
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 15px/1.5 system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--tx);
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 14px;
+}
+
+
+/* ===== Cabeçalho e navegação ===== */
+header {
+  background: var(--pri);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+nav button {
+  background: #ffffff26;
+  color: #fff;
+  border: 0;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav .ativa {
+  background: #fff;
+  color: var(--pri);
+  font-weight: 600;
+}
+
+
+/* ===== Cartões ===== */
+.cartao {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.cartao h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* ===== Formulários ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--mut);
+  gap: 3px;
+  flex: 1;
+  min-width: 140px;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--tx);
+  font: inherit;
+}
+
+form > button {
+  background: var(--pri);
+  color: #fff;
+  border: 0;
+  padding: 9px 16px;
+  border-radius: 8px;
+}
+
+td form {
+  flex-wrap: nowrap;
+}
+
+td input {
+  width: 70px;
+  min-width: 0;
+}
+
+.busca {
+  margin-bottom: 10px;
+}
+
+.busca input {
+  flex: 1;
+  min-width: 160px;
+}
+
+
+/* ===== Botões ===== */
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.mini {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--bd);
+  background: var(--card);
+  color: var(--tx);
+}
+
+.perigo {
+  color: var(--er);
+  border-color: var(--er);
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.acoes .mini {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+
+/* ===== Tabelas ===== */
+.rolar {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--bd);
+  white-space: nowrap;
+}
+
+th {
+  color: var(--mut);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+/* ===== Grades e números ===== */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.numeros div {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.numeros b {
+  display: block;
+  font-size: 20px;
+}
+
+.numeros span {
+  color: var(--mut);
+  font-size: 13px;
+}
+
+
+/* ===== Status ===== */
+.st {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 99px;
+  color: #fff;
+  background: var(--mut);
+}
+
+.st.aberto {
+  background: var(--pri);
+}
+
+.st.confirmado {
+  background: var(--ok);
+}
+
+.st.cancelado {
+  background: var(--er);
+}
+
+
+/* ===== Totais ===== */
+.totais {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  max-width: 440px;
+  margin: 14px 0 6px;
+}
+
+.totais dt,
+.totais dd {
+  margin: 0;
+}
+
+.totais dd {
+  text-align: right;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* ===== Textos auxiliares ===== */
+.nota,
+.vazio {
+  color: var(--mut);
+  font-size: 13px;
+}
+
+
+/* ===== Saída da IA ===== */
+#ia-saida {
+  max-width: 972px;
+  margin: 16px auto 0;
+  width: calc(100% - 28px);
+}
+
+
+/* ===== Aviso (toast) ===== */
+#aviso {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #fff;
+  white-space: pre-line;
+  max-width: 90vw;
+  box-shadow: 0 6px 20px #0004;
+}
+
+#aviso.ok {
+  background: var(--ok);
+}
+
+#aviso.erro {
+  background: var(--er);
+}
+
+
+/* ===== Rodapé fixo na parte inferior da tela ===== */
+.rodape {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 12px;
+  text-align: center;
+
+  font-size: 13px;
+  color: #666;
+  background-color: #f4f5fa;
+  border-top: 1px solid #e5e7eb;
+
+  z-index: 1000;
+}
